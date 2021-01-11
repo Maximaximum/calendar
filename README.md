@@ -1,10 +1,10 @@
 # Calendar
 To start on your localhost you need to:<br/>
   For backend part:<br/>
-    1.install mangodb<br/>
+    1.install mongodb<br/>
     2.cd backend<br/>
-    4.npm install<br/>
-    3.npm start<br/>
+    3.npm install<br/>
+    4.npm start<br/>
   For frontend part:<br/>
     1.cd frontend<br/>
     2.npm install<br/>
