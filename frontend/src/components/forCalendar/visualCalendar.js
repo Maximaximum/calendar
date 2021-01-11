@@ -84,7 +84,7 @@ class VisualCalendar extends React.Component {
     }
 
     for (let i = 0; i < blocks.length; i++) {
-      blocks[i] = <div className="confictEventsContainer">{blocks[i]}</div>
+      blocks[i] = <div key={i} className="confictEventsContainer">{blocks[i]}</div>
     }
 
     return (

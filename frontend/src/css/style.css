@@ -424,8 +424,10 @@ body {
   color: #E2ECF5;
 }
 .calendar .flexContainer .eventsPanel .export {
+  display: block;
   background: #6E9ECF;
   color: #000000;
+  margin: 4rem 0 0;
   padding: 1rem 2rem;
   font-size: 1.5rem;
 }

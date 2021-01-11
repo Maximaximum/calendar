@@ -1,8 +1,4 @@
 const Event = require('../models/event-model')
-const fs = require('fs')
-const path = require('path')
-const appDir = path.dirname(require.main.filename)
-const { join } = require('path')
 
 createEvent = (req, res) => {
     const body = req.body
@@ -88,14 +84,11 @@ downloadEvents = async (req, res) => {
       )
     });
 
-    const dir = join(appDir + '/downloads/' + `${req.params.user}-events.json`)
+    res.setHeader('Content-type', 'aplication/json')
+    res.setHeader('Content-Disposition', `attachment; filename="${req.params.user}.json"`)
+    res.setHeader('Access-Control-Expose-Headers', 'Content-Disposotion')
 
-    fs.writeFile(dir , JSON.stringify(newEvents), function (err) {
-      if (err) throw err;
-      console.log('Saved!');
-    })
-
-    return res.status(200).send(JSON.stringify(newEvents));
+    return res.status(200).json(newEvents)
 
   }).catch(err => console.log(err))
 }

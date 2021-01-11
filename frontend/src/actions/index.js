@@ -1,6 +1,7 @@
 import api from '../api';
 
 export const userLog = (dataFromUser = {}) => async (dispatch, getState) => {
+  dataFromUser.password = btoa(`${dataFromUser.login}:${dataFromUser.password}`);
   const user = await api.getUser(dataFromUser);
   user.data.login ? dispatch(userLogOk(user.data)) : dispatch(userLogErr(user.data.message));
 }
@@ -21,6 +22,7 @@ export const userLogErr = (message) => {
 }
 
 export const addUser = (dataFromUser = {}) => async (dispatch, getState) => {
+  dataFromUser.password = btoa(`${dataFromUser.login}:${dataFromUser.password}`);
   const user = await api.addUser(dataFromUser);
   user.data.success ? dispatch(userRegOk(user.data)) : dispatch(userRegErr(user.data.message));
 }

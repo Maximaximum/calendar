@@ -1,28 +1,11 @@
 import React from 'react';
-import api from '../../api';
 
 class ExportEvents extends React.Component {
-  constructor(props) {
-    super(props);
-
-    this.export = this.export.bind(this);
-  }
-
-  async export() {
-    const events = await api.downloadEvents({ user: this.props.isLogged });
-    console.log(events.data);
-
-    // events.data.data.forEach(event => {
-    //   events.push(
-    //     { start: event.start, duration: event.duration, title: event.title }
-    //   );
-    // });
-  }
-
   render() {
+    const url = `http://localhost:3000/api/download/${this.props.isLogged}`;
     return (
       <>
-        <button className="export" onClick={this.export}>Export events as JSON file</button>
+        <a className="export" href={url}>Download events as JSON file</a>
       </>
     );
   }
