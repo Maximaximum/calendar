@@ -1,0 +1,302 @@
+$primary: #E2ECF5
+$secondary: #6E9ECF
+$text: #000000
+$ligth-text: #3f3939
+$calendar-text: #bbacac
+
+@font-face 
+  font-family: 'Open-Sans'
+  src: url('../fonts/OpenSans-Regular.ttf')
+  font-style: noraml
+  font-weight: normal
+  
+*
+  list-style: none
+  padding: 0
+  margin: 0
+  box-sizing: border-box
+  font-family: Open-Sans
+
+html
+  font-size: 10px
+  overflow-x: hidden
+  h1
+    font-size: 4rem
+    @media(max-width: 500px)
+      font-size: 3rem
+  h3
+    font-size: 2.2rem
+    color: $ligth-text
+    @media(max-width: 500px)
+      font-size: 1.8rem
+  input, button
+    border: 1.5px solid $secondary
+  input, a, select, button
+    transition: color 0.2s ease-in-out
+    border-radius: 15px
+    &:focus
+      color: $secondary
+      outline: none
+  a
+    text-decoration: none
+    color: #000000
+    &:hover
+      color: $secondary
+
+body
+  overflow-x: hidden
+
+.navbar
+  background: $primary
+  @media(min-width: 2000px)
+    padding: 0 15vw
+  ul
+    height: 9rem 
+    display: flex
+    justify-content: space-around
+    align-items: center
+    a
+      font-size: 1.8rem
+
+.footer
+  display: flex
+  align-items: center
+  justify-content: center
+  background: $secondary
+  height: 8rem
+  a
+    font-size: 2rem 
+    color: $primary
+    &:focus
+      color: $ligth-text
+    &:hover
+      color: $ligth-text
+
+.home
+  text-align: center
+  padding: 8rem 0
+  height: 100vh
+  h1
+    margin: 0 0 2rem
+  h3
+    margin: 0 0 5rem
+  a
+    font-size: 2rem 
+    background: $secondary
+    padding: .8rem 2.4rem
+    border-radius: 15px
+    &:hover
+      color: $primary
+    &:focus
+      color: $primary
+
+.login
+  height: calc( 100vh - 9rem )
+  padding: 6rem
+  text-align: center
+  @media(max-width: 425px)
+    padding: 2rem
+  input[type=range]
+    -webkit-appearance: none
+    background: $secondary
+    margin: 0 0 2rem
+    height: 3rem
+    width: 8rem
+    &::-webkit-slider-thumb
+      -webkit-appearance: none
+      box-sizing: content-box
+      width: 4.5rem
+      height: 3rem
+      transform: scale(1.12)
+      border-radius: 15px
+      background: $primary
+  .loginPage-form
+    display: flex
+    width: 30rem
+    margin: 4rem auto
+    padding: 5rem 4rem
+    flex-direction: column
+    text-align: center
+    font-size: 1.9rem
+    background: $primary
+    border-radius: 15px 
+    box-shadow: 1px 5px 15px 5px rgba(0,0,0,0.70)
+    @media(max-width: 425px)
+      width: auto
+    label
+      margin: 0 0 .5rem
+    input
+      height: 3rem
+      margin: 0 0 2rem
+      padding: 0 2rem
+      font-size: 1.7rem
+    input[type=submit]
+      margin: 1.5rem 0
+      font-size: 2rem 
+      background: $secondary
+      &:hover
+        color: $primary
+      &:focus
+        color: $primary
+
+.logout
+  height: calc( 100vh - 9rem )
+  padding: 6rem
+  text-align: center
+  input[type=submit]
+    margin: 3rem 0
+    padding: .8rem 2.4rem
+    font-size: 2rem
+    &:hover
+      color: $secondary
+    &:focus
+        color: $secondary
+
+.calendar
+  padding: 6rem 0
+  text-align: center
+  .flexContainer
+    display: flex
+    justify-content: center
+    margin: 0 -3rem
+    @media(max-width: 768px)
+      margin: 0
+      padding: 0 6rem
+      flex-direction: column
+    @media(max-width: 450px)
+      padding: 3rem
+    .visualCalendar
+      position: relative
+      margin: 5rem 3rem 10rem
+      width: 24.5rem
+      height: calc( 60px * 9 * 2 )
+      vertical-align: top
+      @media(max-width: 768px)
+        margin: 5rem auto 10rem
+      hr
+        position: absolute
+        left: 0
+        right: 0
+        height: .1rem
+        background: $calendar-text
+        border: none
+      p, small
+        position: absolute
+        color: $calendar-text
+        left: 0
+        font-size: 1.6rem
+        font-weight: 200
+      small
+        font-size: 1.2rem
+      .confictEventsContainer
+        position: absolute
+        display: flex
+        width: 20rem
+        margin-left: 4.5rem
+        .visualCalendar-event
+          overflow: hidden
+          white-space: nowrap
+          text-overflow: ellipsis
+          position: relative
+          width: 20rem
+          padding: .7rem .5rem
+          background: $primary
+          border-left: 3px solid $secondary
+          text-align: left
+          span
+            max-width: 1.8rem
+            color: $text
+            font-size: 1.4rem
+    .eventsPanel
+      min-width: 45rem  
+      margin: 5rem 3rem
+      padding: 0 6rem
+      border-left: 1px solid $secondary
+      border-right: 1px solid $secondary
+      @media(max-width: 768px)
+        min-width: 1rem  
+        margin: 5rem 0
+        padding: 0
+        border-left: none
+        border-right: none
+      h4
+        margin: 5rem 0 0
+        font-size: 2.2rem
+        color: $ligth-text
+      ul
+        margin: 5rem 0
+        li
+          padding: 0 0 6rem
+          position: relative
+          color: $ligth-text
+          h6
+            overflow-x: hidden
+            max-width: 37rem
+            font-size: 1.8rem
+            margin: 0 auto 2rem
+            @media(max-width: 768px)
+              max-width: 100%
+              font-size: 1.5rem
+          span
+            display: block
+            text-align: left
+            font-size: 1.4rem
+          button
+            position: absolute
+            width: 2.5rem
+            height: 2.5rem
+            right: 3rem
+            transform: translateY(-4rem)
+            font-size: 1.4rem 
+            background: $primary
+            border-radius: 50%
+            @media(max-width: 768px)
+              right: 0
+            &:hover
+              color: $secondary
+            &:focus
+                color: $secondary
+      .calendarPage-form
+        display: flex
+        margin: 0
+        flex-direction: column
+        text-align: center
+        font-size: 1.9rem
+        h3
+          margin: 0 0 2rem
+          font-size: 2.5rem
+        label
+          display: flex
+          margin: 1rem auto
+          width: 100%
+          justify-content: space-between
+          p
+            text-align: left
+            width: 50%
+          select, input
+            width: 7rem
+            height: 3rem
+            font-size: 2rem
+            padding: 0 0 0 .5rem
+          input
+            width: 100%
+            font-size: 1.5rem
+            padding: 0 0 0 1rem
+        input[type=submit]
+          display: block
+          width: 20rem
+          height: 3.5rem
+          margin: 2rem auto 0
+          font-size: 2rem 
+          background: $secondary
+          &:hover
+            color: $primary
+          &:focus
+              color: $primary
+      .export
+        background: $secondary
+        color: $text
+        padding: 1rem 2rem
+        font-size: 1.5rem
+        &:hover
+          color: $primary

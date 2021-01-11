@@ -1,0 +1,434 @@
+@font-face {
+  font-family: "Open-Sans";
+  src: url("../fonts/OpenSans-Regular.ttf");
+  font-style: noraml;
+  font-weight: normal;
+}
+* {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: Open-Sans;
+}
+
+html {
+  font-size: 10px;
+  overflow-x: hidden;
+}
+html h1 {
+  font-size: 4rem;
+}
+@media(max-width: 500px) {
+  html h1 {
+    font-size: 3rem;
+  }
+}
+html h3 {
+  font-size: 2.2rem;
+  color: #3f3939;
+}
+@media(max-width: 500px) {
+  html h3 {
+    font-size: 1.8rem;
+  }
+}
+html input, html button {
+  border: 1.5px solid #6E9ECF;
+}
+html input, html a, html select, html button {
+  -webkit-transition: color 0.2s ease-in-out;
+  transition: color 0.2s ease-in-out;
+  border-radius: 15px;
+}
+html input:focus, html a:focus, html select:focus, html button:focus {
+  color: #6E9ECF;
+  outline: none;
+}
+html a {
+  text-decoration: none;
+  color: #000000;
+}
+html a:hover {
+  color: #6E9ECF;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.navbar {
+  background: #E2ECF5;
+}
+@media(min-width: 2000px) {
+  .navbar {
+    padding: 0 15vw;
+  }
+}
+.navbar ul {
+  height: 9rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.navbar ul a {
+  font-size: 1.8rem;
+}
+
+.footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: #6E9ECF;
+  height: 8rem;
+}
+.footer a {
+  font-size: 2rem;
+  color: #E2ECF5;
+}
+.footer a:focus {
+  color: #3f3939;
+}
+.footer a:hover {
+  color: #3f3939;
+}
+
+.home {
+  text-align: center;
+  padding: 8rem 0;
+  height: 100vh;
+}
+.home h1 {
+  margin: 0 0 2rem;
+}
+.home h3 {
+  margin: 0 0 5rem;
+}
+.home a {
+  font-size: 2rem;
+  background: #6E9ECF;
+  padding: 0.8rem 2.4rem;
+  border-radius: 15px;
+}
+.home a:hover {
+  color: #E2ECF5;
+}
+.home a:focus {
+  color: #E2ECF5;
+}
+
+.login {
+  height: calc( 100vh - 9rem );
+  padding: 6rem;
+  text-align: center;
+}
+@media(max-width: 425px) {
+  .login {
+    padding: 2rem;
+  }
+}
+.login input[type=range] {
+  -webkit-appearance: none;
+  background: #6E9ECF;
+  margin: 0 0 2rem;
+  height: 3rem;
+  width: 8rem;
+}
+.login input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  width: 4.5rem;
+  height: 3rem;
+  -webkit-transform: scale(1.12);
+          transform: scale(1.12);
+  border-radius: 15px;
+  background: #E2ECF5;
+}
+.login .loginPage-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 30rem;
+  margin: 4rem auto;
+  padding: 5rem 4rem;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  font-size: 1.9rem;
+  background: #E2ECF5;
+  border-radius: 15px;
+  -webkit-box-shadow: 1px 5px 15px 5px rgba(0, 0, 0, 0.7);
+          box-shadow: 1px 5px 15px 5px rgba(0, 0, 0, 0.7);
+}
+@media(max-width: 425px) {
+  .login .loginPage-form {
+    width: auto;
+  }
+}
+.login .loginPage-form label {
+  margin: 0 0 0.5rem;
+}
+.login .loginPage-form input {
+  height: 3rem;
+  margin: 0 0 2rem;
+  padding: 0 2rem;
+  font-size: 1.7rem;
+}
+.login .loginPage-form input[type=submit] {
+  margin: 1.5rem 0;
+  font-size: 2rem;
+  background: #6E9ECF;
+}
+.login .loginPage-form input[type=submit]:hover {
+  color: #E2ECF5;
+}
+.login .loginPage-form input[type=submit]:focus {
+  color: #E2ECF5;
+}
+
+.logout {
+  height: calc( 100vh - 9rem );
+  padding: 6rem;
+  text-align: center;
+}
+.logout input[type=submit] {
+  margin: 3rem 0;
+  padding: 0.8rem 2.4rem;
+  font-size: 2rem;
+}
+.logout input[type=submit]:hover {
+  color: #6E9ECF;
+}
+.logout input[type=submit]:focus {
+  color: #6E9ECF;
+}
+
+.calendar {
+  padding: 6rem 0;
+  text-align: center;
+}
+.calendar .flexContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0 -3rem;
+}
+@media(max-width: 768px) {
+  .calendar .flexContainer {
+    margin: 0;
+    padding: 0 6rem;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+@media(max-width: 450px) {
+  .calendar .flexContainer {
+    padding: 3rem;
+  }
+}
+.calendar .flexContainer .visualCalendar {
+  position: relative;
+  margin: 5rem 3rem 10rem;
+  width: 24.5rem;
+  height: calc( 60px * 9 * 2 );
+  vertical-align: top;
+}
+@media(max-width: 768px) {
+  .calendar .flexContainer .visualCalendar {
+    margin: 5rem auto 10rem;
+  }
+}
+.calendar .flexContainer .visualCalendar hr {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 0.1rem;
+  background: #bbacac;
+  border: none;
+}
+.calendar .flexContainer .visualCalendar p, .calendar .flexContainer .visualCalendar small {
+  position: absolute;
+  color: #bbacac;
+  left: 0;
+  font-size: 1.6rem;
+  font-weight: 200;
+}
+.calendar .flexContainer .visualCalendar small {
+  font-size: 1.2rem;
+}
+.calendar .flexContainer .visualCalendar .confictEventsContainer {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 20rem;
+  margin-left: 4.5rem;
+}
+.calendar .flexContainer .visualCalendar .confictEventsContainer .visualCalendar-event {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  position: relative;
+  width: 20rem;
+  padding: 0.7rem 0.5rem;
+  background: #E2ECF5;
+  border-left: 3px solid #6E9ECF;
+  text-align: left;
+}
+.calendar .flexContainer .visualCalendar .confictEventsContainer .visualCalendar-event span {
+  max-width: 1.8rem;
+  color: #000000;
+  font-size: 1.4rem;
+}
+.calendar .flexContainer .eventsPanel {
+  min-width: 45rem;
+  margin: 5rem 3rem;
+  padding: 0 6rem;
+  border-left: 1px solid #6E9ECF;
+  border-right: 1px solid #6E9ECF;
+}
+@media(max-width: 768px) {
+  .calendar .flexContainer .eventsPanel {
+    min-width: 1rem;
+    margin: 5rem 0;
+    padding: 0;
+    border-left: none;
+    border-right: none;
+  }
+}
+.calendar .flexContainer .eventsPanel h4 {
+  margin: 5rem 0 0;
+  font-size: 2.2rem;
+  color: #3f3939;
+}
+.calendar .flexContainer .eventsPanel ul {
+  margin: 5rem 0;
+}
+.calendar .flexContainer .eventsPanel ul li {
+  padding: 0 0 6rem;
+  position: relative;
+  color: #3f3939;
+}
+.calendar .flexContainer .eventsPanel ul li h6 {
+  overflow-x: hidden;
+  max-width: 37rem;
+  font-size: 1.8rem;
+  margin: 0 auto 2rem;
+}
+@media(max-width: 768px) {
+  .calendar .flexContainer .eventsPanel ul li h6 {
+    max-width: 100%;
+    font-size: 1.5rem;
+  }
+}
+.calendar .flexContainer .eventsPanel ul li span {
+  display: block;
+  text-align: left;
+  font-size: 1.4rem;
+}
+.calendar .flexContainer .eventsPanel ul li button {
+  position: absolute;
+  width: 2.5rem;
+  height: 2.5rem;
+  right: 3rem;
+  -webkit-transform: translateY(-4rem);
+          transform: translateY(-4rem);
+  font-size: 1.4rem;
+  background: #E2ECF5;
+  border-radius: 50%;
+}
+@media(max-width: 768px) {
+  .calendar .flexContainer .eventsPanel ul li button {
+    right: 0;
+  }
+}
+.calendar .flexContainer .eventsPanel ul li button:hover {
+  color: #6E9ECF;
+}
+.calendar .flexContainer .eventsPanel ul li button:focus {
+  color: #6E9ECF;
+}
+.calendar .flexContainer .eventsPanel .calendarPage-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  font-size: 1.9rem;
+}
+.calendar .flexContainer .eventsPanel .calendarPage-form h3 {
+  margin: 0 0 2rem;
+  font-size: 2.5rem;
+}
+.calendar .flexContainer .eventsPanel .calendarPage-form label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 1rem auto;
+  width: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.calendar .flexContainer .eventsPanel .calendarPage-form label p {
+  text-align: left;
+  width: 50%;
+}
+.calendar .flexContainer .eventsPanel .calendarPage-form label select, .calendar .flexContainer .eventsPanel .calendarPage-form label input {
+  width: 7rem;
+  height: 3rem;
+  font-size: 2rem;
+  padding: 0 0 0 0.5rem;
+}
+.calendar .flexContainer .eventsPanel .calendarPage-form label input {
+  width: 100%;
+  font-size: 1.5rem;
+  padding: 0 0 0 1rem;
+}
+.calendar .flexContainer .eventsPanel .calendarPage-form input[type=submit] {
+  display: block;
+  width: 20rem;
+  height: 3.5rem;
+  margin: 2rem auto 0;
+  font-size: 2rem;
+  background: #6E9ECF;
+}
+.calendar .flexContainer .eventsPanel .calendarPage-form input[type=submit]:hover {
+  color: #E2ECF5;
+}
+.calendar .flexContainer .eventsPanel .calendarPage-form input[type=submit]:focus {
+  color: #E2ECF5;
+}
+.calendar .flexContainer .eventsPanel .export {
+  background: #6E9ECF;
+  color: #000000;
+  padding: 1rem 2rem;
+  font-size: 1.5rem;
+}
+.calendar .flexContainer .eventsPanel .export:hover {
+  color: #E2ECF5;
+}
